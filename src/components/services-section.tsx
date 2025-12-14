@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ConstructionIcon, BuildingIcon, TargetIcon } from "./icons";
+import { BuildingIcon, ConstructionIcon, TargetIcon } from "./icons";
 import ScrollReveal from "./scroll-reveal";
 
 export default function ServicesSection() {
@@ -41,14 +41,14 @@ export default function ServicesSection() {
               const IconComponent = service.icon;
               return (
                 <ScrollReveal key={index} delay={200 + index * 100}>
-                  <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+                  <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 border border-gray-200 h-full flex flex-col">
                     <div className="flex justify-center mb-4 text-zebeko-500">
                       <IconComponent className="w-14 h-14" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
                   </div>
                 </ScrollReveal>
               );

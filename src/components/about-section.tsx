@@ -19,34 +19,34 @@ export default function AboutSection() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <ScrollReveal delay={200}>
-              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg">
-                <div className="flex justify-center mb-4 text-zebeko-500">
-                  <ConstructionIcon className="w-12 h-12" />
+              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                <div className="flex justify-center mb-4 text-zebeko-500/60">
+                  <ConstructionIcon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Kvalita</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 flex-grow">
                   Používáme pouze nejkvalitnější materiály a dodržujeme přísné standardy výstavby.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
-              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg">
-                <div className="flex justify-center mb-4 text-zebeko-500">
-                  <ReliabilityIcon className="w-12 h-12" />
+              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                <div className="flex justify-center mb-4 text-zebeko-500/60">
+                  <ReliabilityIcon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Spolehlivost</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 flex-grow">
                   Dodržujeme termíny a garantujeme profesionální přístup k každému projektu.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={400}>
-              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg">
-                <div className="flex justify-center mb-4 text-zebeko-500">
-                  <ExperienceIcon className="w-12 h-12" />
+              <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                <div className="flex justify-center mb-4 text-zebeko-500/60">
+                  <ExperienceIcon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Zkušenosti</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 flex-grow">
                   Máme bohaté zkušenosti s realizací projektů různých velikostí a složitosti.
                 </p>
               </div>
