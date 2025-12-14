@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/data/projects";
-import { PhotoIcon } from "@/components/icons";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -98,9 +98,15 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               {project.images.map((image, index) => (
                 <div
                   key={index}
-                  className="aspect-video bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center"
+                  className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group cursor-pointer"
                 >
-                  <PhotoIcon className="w-16 h-16 text-gray-400" />
+                  <Image
+                    src={image}
+                    alt={`${project.title} - obrázek ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               ))}
             </div>

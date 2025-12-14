@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import Hero from "@/components/hero";
 import AboutSection from "@/components/about-section";
-import ServicesSection from "@/components/services-section";
 import FeaturedProjects from "@/components/featured-projects";
+import Hero from "@/components/hero";
+import ServicesSection from "@/components/services-section";
+import StatsSection from "@/components/stats-section";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Železobetonové konstrukce na míru | Stavební firma Praha",
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatsSection />
       <AboutSection />
       <ServicesSection />
       <FeaturedProjects />
