@@ -21,22 +21,22 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Rychlé odkazy</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-orange-500 transition-colors">
+                <Link href="/" className="hover:text-zebeko-500 transition-colors">
                   Domů
                 </Link>
               </li>
               <li>
-                <Link href="/nase-stavby" className="hover:text-orange-500 transition-colors">
+                <Link href="/nase-stavby" className="hover:text-zebeko-500 transition-colors">
                   Naše stavby
                 </Link>
               </li>
               <li>
-                <Link href="/reference" className="hover:text-orange-500 transition-colors">
+                <Link href="/reference" className="hover:text-zebeko-500 transition-colors">
                   Reference
                 </Link>
               </li>
               <li>
-                <Link href="/kontakty" className="hover:text-orange-500 transition-colors">
+                <Link href="/kontakty" className="hover:text-zebeko-500 transition-colors">
                   Kontakty
                 </Link>
               </li>
@@ -48,7 +48,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/kontakty" className="hover:text-orange-500 transition-colors">
+                <Link href="/kontakty" className="hover:text-zebeko-500 transition-colors">
                   Kontaktní formulář
                 </Link>
               </li>

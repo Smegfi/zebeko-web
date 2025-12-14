@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold text-white group-hover:text-orange-500 transition-colors">
+            <div className="text-2xl font-bold text-white group-hover:text-zebeko-500 transition-colors">
               ŽEBEKO
             </div>
             <span className="text-xs text-gray-400 hidden sm:inline">
@@ -24,25 +24,25 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Domů
             </Link>
             <Link
               href="/nase-stavby"
-              className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Naše stavby
             </Link>
             <Link
               href="/reference"
-              className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Reference
             </Link>
             <Link
               href="/kontakty"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors font-medium"
+              className="bg-zebeko-500 hover:bg-zebeko-600 text-white px-6 py-2 rounded-lg transition-colors font-medium"
             >
               Kontakt
             </Link>
@@ -78,28 +78,28 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Domů
               </Link>
               <Link
                 href="/nase-stavby"
-                className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Naše stavby
               </Link>
               <Link
                 href="/reference"
-                className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
+                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reference
               </Link>
               <Link
                 href="/kontakty"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors font-medium text-center"
+                className="bg-zebeko-500 hover:bg-zebeko-600 text-white px-6 py-2 rounded-lg transition-colors font-medium text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Kontakt

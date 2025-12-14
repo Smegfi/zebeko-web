@@ -1,21 +1,22 @@
 import Link from "next/link";
+import { ConstructionIcon, BuildingIcon, TargetIcon } from "./icons";
 
 export default function ServicesSection() {
   const services = [
     {
       title: "Železobetonové konstrukce",
       description: "Komplexní realizace železobetonových konstrukcí pro všechny typy staveb. Od návrhu po finální provedení.",
-      icon: "🏗️",
+      icon: ConstructionIcon,
     },
     {
       title: "Skeletové stavby",
       description: "Výstavba nosných skeletů pro kancelářské, průmyslové a obytné budovy. Moderní technologie a spolehlivé provedení.",
-      icon: "🏢",
+      icon: BuildingIcon,
     },
     {
       title: "Drobná výstavba",
       description: "Realizace menších stavebních projektů včetně dětských hřišť, zpevněných ploch a dalších stavebních prací.",
-      icon: "🎯",
+      icon: TargetIcon,
     },
   ];
 
@@ -31,24 +32,29 @@ export default function ServicesSection() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200"
-              >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-              </div>
-            ))}
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+                >
+                  <div className="flex justify-center mb-4 text-zebeko-500">
+                    <IconComponent className="w-14 h-14" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                </div>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">
             <Link
               href="/kontakty"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block bg-zebeko-500 hover:bg-zebeko-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Zjistit více
             </Link>

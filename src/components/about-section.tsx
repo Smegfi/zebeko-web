@@ -1,3 +1,5 @@
+import { ConstructionIcon, ReliabilityIcon, ExperienceIcon } from "./icons";
+
 export default function AboutSection() {
   return (
     <section className="py-20 bg-white">
@@ -12,21 +14,27 @@ export default function AboutSection() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-              <div className="text-4xl mb-4">🏗️</div>
+              <div className="flex justify-center mb-4 text-zebeko-500">
+                <ConstructionIcon className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Kvalita</h3>
               <p className="text-gray-600">
                 Používáme pouze nejkvalitnější materiály a dodržujeme přísné standardy výstavby.
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-              <div className="text-4xl mb-4">⚡</div>
+              <div className="flex justify-center mb-4 text-zebeko-500">
+                <ReliabilityIcon className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Spolehlivost</h3>
               <p className="text-gray-600">
                 Dodržujeme termíny a garantujeme profesionální přístup k každému projektu.
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-              <div className="text-4xl mb-4">📐</div>
+              <div className="flex justify-center mb-4 text-zebeko-500">
+                <ExperienceIcon className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Zkušenosti</h3>
               <p className="text-gray-600">
                 Máme bohaté zkušenosti s realizací projektů různých velikostí a složitosti.

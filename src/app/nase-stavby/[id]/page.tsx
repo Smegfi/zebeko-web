@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { PhotoIcon } from "@/components/icons";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -45,7 +46,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto">
           <Link
             href="/nase-stavby"
-            className="inline-flex items-center text-gray-600 hover:text-orange-500 mb-8 transition-colors"
+            className="inline-flex items-center text-gray-600 hover:text-zebeko-500 mb-8 transition-colors"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -62,7 +63,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </Link>
 
           <div className="mb-8">
-            <span className="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block bg-zebeko-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
               {project.category}
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -99,7 +100,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   key={index}
                   className="aspect-video bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center"
                 >
-                  <div className="text-6xl text-gray-400">📷</div>
+                  <PhotoIcon className="w-16 h-16 text-gray-400" />
                 </div>
               ))}
             </div>
@@ -108,7 +109,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           <div className="border-t border-gray-200 pt-8">
             <Link
               href="/kontakty"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block bg-zebeko-500 hover:bg-zebeko-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Kontaktujte nás ohledně podobného projektu
             </Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { ConstructionIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Naše stavby",
@@ -32,15 +33,15 @@ export default function NaseStavbyPage() {
               >
                 <div className="aspect-video bg-gray-800 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                    <div className="text-6xl text-gray-600">🏗️</div>
+                    <ConstructionIcon className="w-16 h-16 text-gray-500" />
                   </div>
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-                  <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 bg-zebeko-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                     {project.category}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zebeko-500 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 mb-3 flex items-center">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { partners } from "@/data/partners";
+import { BuildingIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Reference",
@@ -29,7 +30,9 @@ export default function ReferencePage() {
                 className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors border border-gray-200 flex items-center justify-center min-h-[120px]"
               >
                 <div className="text-center">
-                  <div className="text-3xl mb-2">🏢</div>
+                  <div className="flex justify-center mb-2 text-gray-600">
+                    <BuildingIcon className="w-8 h-8" />
+                  </div>
                   <h3 className="font-semibold text-gray-900 text-sm">
                     {partner.name}
                   </h3>

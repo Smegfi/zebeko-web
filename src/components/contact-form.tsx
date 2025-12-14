@@ -81,7 +81,7 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
             errors.name ? "border-red-500" : "border-gray-300"
           }`}
           placeholder="Vaše jméno"
@@ -101,7 +101,7 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
             errors.email ? "border-red-500" : "border-gray-300"
           }`}
           placeholder="vas@email.cz"
@@ -121,7 +121,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           rows={6}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
             errors.message ? "border-red-500" : "border-gray-300"
           }`}
           placeholder="Vaše zpráva..."
@@ -146,7 +146,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-zebeko-500 hover:bg-zebeko-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Odesílám..." : "Odeslat zprávu"}
       </button>
