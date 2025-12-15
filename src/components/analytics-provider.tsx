@@ -1,10 +1,10 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { pageview } from "@/lib/gtag";
 
-export default function AnalyticsProvider() {
+function Analytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -16,5 +16,13 @@ export default function AnalyticsProvider() {
   }, [pathname, searchParams]);
 
   return null;
+}
+
+export default function AnalyticsProvider() {
+  return (
+    <Suspense fallback={null}>
+      <Analytics />
+    </Suspense>
+  );
 }
 
