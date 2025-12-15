@@ -32,6 +32,12 @@ export default function Header() {
               Naše stavby
             </Link>
             <Link
+              href="/faq"
+              className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
+            >
+              FAQ
+            </Link>
+            <Link
               href="/kontakty"
               className="bg-zebeko-500 hover:bg-zebeko-600 text-white px-6 py-2 rounded-lg transition-colors font-medium"
             >
@@ -80,6 +86,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Naše stavby
+              </Link>
+              <Link
+                href="/faq"
+                className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link
                 href="/reference"

@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import GoogleAnalytics from "@/components/google-analytics";
+import AnalyticsProvider from "@/components/analytics-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +65,8 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className={`${inter.variable} antialiased`}>
+        <GoogleAnalytics />
+        <AnalyticsProvider />
         <Header />
         <main className="min-h-screen pt-20">
           {children}

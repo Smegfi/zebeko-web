@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { event } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -51,8 +52,22 @@ export default function ContactForm() {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
+      
+      // Track successful form submission
+      event({
+        action: "submit_form",
+        category: "Contact",
+        label: "Contact Form Submission",
+      });
     } catch (error) {
       setSubmitStatus("error");
+      
+      // Track form error
+      event({
+        action: "form_error",
+        category: "Contact",
+        label: "Contact Form Error",
+      });
     } finally {
       setIsSubmitting(false);
     }
