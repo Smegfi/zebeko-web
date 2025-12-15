@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 border-t border-gray-800">
+    <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -38,7 +38,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+        <div className="mt-8 pt-8 border-t border-neutral-800 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} ŽEBEKO. Všechna práva vyhrazena.</p>
         </div>
       </div>

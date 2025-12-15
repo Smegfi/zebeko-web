@@ -7,7 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -21,13 +21,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
+              className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Domů
             </Link>
             <Link
               href="/nase-stavby"
-              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
+              className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Naše stavby
             </Link>
@@ -41,7 +41,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-neutral-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -65,25 +65,25 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800">
+          <div className="md:hidden py-4 border-t border-neutral-800">
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
+                className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Domů
               </Link>
               <Link
                 href="/nase-stavby"
-                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
+                className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Naše stavby
               </Link>
               <Link
                 href="/reference"
-                className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
+                className="text-neutral-300 hover:text-zebeko-500 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reference

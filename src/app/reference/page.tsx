@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { partners } from "@/data/partners";
 import { BuildingIcon } from "@/components/icons";
+import { partners } from "@/data/partners";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Reference",
@@ -14,10 +14,10 @@ export default function ReferencePage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-neutral-900 mb-4">
               Naši partneři
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
               Spolupracujeme s předními stavebními společnostmi v České republice.
               Naše reference zahrnují renomované firmy z oblasti stavebnictví.
             </p>
@@ -27,13 +27,13 @@ export default function ReferencePage() {
             {partners.map((partner) => (
               <div
                 key={partner.id}
-                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors border border-gray-200 flex items-center justify-center min-h-[120px]"
+                className="bg-neutral-50 rounded-lg p-6 hover:bg-neutral-100 transition-colors border border-neutral-200 flex items-center justify-center min-h-[120px]"
               >
                 <div className="text-center">
-                  <div className="flex justify-center mb-2 text-gray-600">
+                  <div className="flex justify-center mb-2 text-neutral-600">
                     <BuildingIcon className="w-8 h-8" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 text-sm">
+                  <h3 className="font-semibold text-neutral-900 text-sm">
                     {partner.name}
                   </h3>
                 </div>
@@ -42,7 +42,7 @@ export default function ReferencePage() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600">
+            <p className="text-neutral-600">
               Jsme hrdí na dlouhodobou spolupráci s těmito společnostmi a na
               spolehlivost, kterou prokazujeme při realizaci společných projektů.
             </p>

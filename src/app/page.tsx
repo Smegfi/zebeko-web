@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Železobetonové konstrukce na míru | Stavební firma Praha",
   description:
-    "Společnost Žebeko se specializuje na výstavbu železobetonových konstrukcí, nosných skeletů a realizaci stavebních projektů v Praze a okolí. Kvalita, spolehlivost a zkušenosti.",
+    "ŽEBEKO - stavíme pevné základy pro vaše projekty. Železobetonové konstrukce, skeletové stavby a stavební projekty v Praze a okolí. Kvalita, spolehlivost a zkušenosti.",
 };
 
 export default function Home() {

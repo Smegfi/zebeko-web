@@ -22,7 +22,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -32,16 +32,16 @@ export default function ServicesSection() {
                 const IconComponent = service.icon;
                 return (
                   <ScrollReveal key={index} delay={200 + index * 100}>
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-[1.02] border border-gray-200">
+                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-[1.02] border border-neutral-200">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 text-zebeko-500">
                           <IconComponent className="w-12 h-12" />
                         </div>
                         <div className="flex-grow">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          <h3 className="text-xl font-semibold text-neutral-900 mb-2">
                             {service.title}
                           </h3>
-                          <p className="text-gray-600">{service.description}</p>
+                          <p className="text-neutral-600">{service.description}</p>
                         </div>
                       </div>
                     </div>
@@ -53,16 +53,16 @@ export default function ServicesSection() {
             {/* Text napravo */}
             <div className="order-1 lg:order-2">
               <ScrollReveal>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl font-bold text-neutral-900 mb-6">
                   S čím dokážeme pomoci
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <p className="text-lg text-gray-700 mb-6">
-                  Jsme specializovaná společnost s dlouholetými zkušenostmi v oblasti železobetonových konstrukcí a stavebních prací. Nabízíme komplexní řešení od návrhu až po realizaci vašich projektů.
+                <p className="text-lg text-neutral-700 mb-6">
+                  Máte projekt, který potřebuje pevné základy? Pomůžeme vám od prvního návrhu až po finální realizaci. Naše zkušenosti sahají od rozsáhlých kancelářských komplexů až po menší projekty, které mají velký význam.
                 </p>
-                <p className="text-lg text-gray-700 mb-8">
-                  Naše služby zahrnují výstavbu nosných konstrukcí, skeletových staveb i realizaci menších stavebních projektů. Spolupracujeme s klienty na projektech různé velikosti a složitosti.
+                <p className="text-lg text-neutral-700 mb-8">
+                  Nezáleží na velikosti vašeho projektu – každý přistupujeme s maximální péčí a profesionálním přístupem. Společně postavíme něco, na co budete hrdí.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={200}>

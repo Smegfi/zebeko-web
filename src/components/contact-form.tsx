@@ -72,7 +72,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
           Jméno *
         </label>
         <input
@@ -82,7 +82,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
-            errors.name ? "border-red-500" : "border-gray-300"
+            errors.name ? "border-red-500" : "border-neutral-300"
           }`}
           placeholder="Vaše jméno"
         />
@@ -92,7 +92,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
           E-mail *
         </label>
         <input
@@ -102,7 +102,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
-            errors.email ? "border-red-500" : "border-gray-300"
+            errors.email ? "border-red-500" : "border-neutral-300"
           }`}
           placeholder="vas@email.cz"
         />
@@ -112,7 +112,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
           Zpráva *
         </label>
         <textarea
@@ -122,7 +122,7 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={6}
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-zebeko-500 focus:border-transparent ${
-            errors.message ? "border-red-500" : "border-gray-300"
+            errors.message ? "border-red-500" : "border-neutral-300"
           }`}
           placeholder="Vaše zpráva..."
         />

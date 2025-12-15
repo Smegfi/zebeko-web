@@ -9,33 +9,33 @@ export const metadata: Metadata = {
 
 export default function KontaktyPage() {
   return (
-    <div className="bg-gray-50 py-20">
+    <div className="bg-neutral-50 py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-neutral-900 mb-4">
               Kontaktujte nás
             </h1>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-neutral-700">
               Máte dotaz nebo zájem o naše služby? Neváhejte nás kontaktovat.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-neutral-900 mb-4">
                 Kontaktní údaje
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-neutral-600 mb-6">
                 Hledáte partnera k dalšímu projektu? Neváhejte nás kontaktovat.
               </p>
               <div className="space-y-4">
-                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                  <h3 className="font-semibold text-gray-900 mb-4">
+                <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
+                  <h3 className="font-semibold text-neutral-900 mb-4">
                     Jednatel firmy
                   </h3>
-                  <div className="space-y-3 text-gray-700">
-                    <p className="font-medium text-gray-900">Štefan Šmehyl</p>
+                  <div className="space-y-3 text-neutral-700">
+                    <p className="font-medium text-neutral-900">Štefan Šmehyl</p>
                     <p className="flex items-center">
                       <svg
                         className="w-5 h-5 mr-2 text-zebeko-500"
@@ -76,12 +76,12 @@ export default function KontaktyPage() {
                     </p>
                   </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                  <h3 className="font-semibold text-gray-900 mb-4">
+                <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
+                  <h3 className="font-semibold text-neutral-900 mb-4">
                     Pro vyřizování staveb
                   </h3>
-                  <div className="space-y-3 text-gray-700">
-                    <p className="font-medium text-gray-900">Juraj Šmehyl</p>
+                  <div className="space-y-3 text-neutral-700">
+                    <p className="font-medium text-neutral-900">Juraj Šmehyl</p>
                     <p className="flex items-center">
                       <svg
                         className="w-5 h-5 mr-2 text-zebeko-500"
@@ -107,7 +107,7 @@ export default function KontaktyPage() {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              <h2 className="text-2xl font-semibold text-neutral-900 mb-6">
                 Kontaktní formulář
               </h2>
               <ContactForm />

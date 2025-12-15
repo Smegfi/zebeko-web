@@ -16,10 +16,10 @@ export default function NaseStavbyPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-neutral-900 mb-4">
               Naše stavby
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
               Prohlédněte si naše úspěšně dokončené projekty. Každá stavba je
               důkazem naší kvality, spolehlivosti a odbornosti.
             </p>
@@ -30,9 +30,9 @@ export default function NaseStavbyPage() {
               <Link
                 key={project.id}
                 href={`/nase-stavby/${project.id}`}
-                className="group block bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+                className="group block bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
               >
-                <div className="aspect-video bg-gray-800 relative overflow-hidden">
+                <div className="aspect-video bg-neutral-800 relative overflow-hidden">
                   {project.images && project.images.length > 0 ? (
                     <Image
                       src={project.images[0]}
@@ -42,8 +42,8 @@ export default function NaseStavbyPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                      <ConstructionIcon className="w-16 h-16 text-gray-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-900 flex items-center justify-center">
+                      <ConstructionIcon className="w-16 h-16 text-neutral-500" />
                     </div>
                   )}
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
@@ -55,7 +55,7 @@ export default function NaseStavbyPage() {
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zebeko-500 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-3 flex items-center">
+                  <p className="text-neutral-400 mb-3 flex items-center">
                     <svg
                       className="w-4 h-4 mr-2"
                       fill="none"
@@ -70,7 +70,7 @@ export default function NaseStavbyPage() {
                     </svg>
                     {project.location}
                   </p>
-                  <p className="text-gray-300 text-sm line-clamp-3">
+                  <p className="text-neutral-300 text-sm line-clamp-3">
                     {project.description}
                   </p>
                 </div>

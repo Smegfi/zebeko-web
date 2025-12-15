@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 import { projects } from "@/data/projects";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -46,7 +46,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto">
           <Link
             href="/nase-stavby"
-            className="inline-flex items-center text-gray-600 hover:text-zebeko-500 mb-8 transition-colors"
+            className="inline-flex items-center text-neutral-600 hover:text-zebeko-500 mb-8 transition-colors"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               {project.title}
             </h1>
-            <p className="text-xl text-gray-600 flex items-center">
+            <p className="text-xl text-neutral-600 flex items-center">
               <svg
                 className="w-5 h-5 mr-2"
                 fill="none"
@@ -87,7 +87,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </div>
 
           <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-gray-700 leading-relaxed">{project.description}</p>
+            <p className="text-neutral-700 leading-relaxed">{project.description}</p>
           </div>
 
           <div className="mb-12">
@@ -98,7 +98,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               {project.images.map((image, index) => (
                 <div
                   key={index}
-                  className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group cursor-pointer"
+                  className="aspect-video bg-neutral-200 rounded-lg overflow-hidden relative group cursor-pointer"
                 >
                   <Image
                     src={image}
@@ -112,7 +112,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-8">
+          <div className="border-t border-neutral-200 pt-8">
             <Link
               href="/kontakty"
               className="inline-block bg-zebeko-500 hover:bg-zebeko-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
