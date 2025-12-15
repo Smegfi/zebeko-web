@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { projects } from "@/data/projects";
 import { ConstructionIcon } from "@/components/icons";
+import { projects } from "@/data/projects";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Naše stavby",
@@ -32,9 +33,19 @@ export default function NaseStavbyPage() {
                 className="group block bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
               >
                 <div className="aspect-video bg-gray-800 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                    <ConstructionIcon className="w-16 h-16 text-gray-500" />
-                  </div>
+                  {project.images && project.images.length > 0 ? (
+                    <Image
+                      src={project.images[0]}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+                      <ConstructionIcon className="w-16 h-16 text-gray-500" />
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                   <div className="absolute top-4 right-4 bg-zebeko-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                     {project.category}

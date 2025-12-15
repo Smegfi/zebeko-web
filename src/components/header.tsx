@@ -15,9 +15,6 @@ export default function Header() {
             <div className="text-2xl font-bold text-white group-hover:text-zebeko-500 transition-colors">
               ŽEBEKO
             </div>
-            <span className="text-xs text-gray-400 hidden sm:inline">
-              ŽElezo BEtonové KOnstrukce
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,12 +30,6 @@ export default function Header() {
               className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
             >
               Naše stavby
-            </Link>
-            <Link
-              href="/reference"
-              className="text-gray-300 hover:text-zebeko-500 transition-colors font-medium"
-            >
-              Reference
             </Link>
             <Link
               href="/kontakty"
