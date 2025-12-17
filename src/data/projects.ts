@@ -10,9 +10,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "klecany-kancelare",
-    title: "Kancelářské a skladové prostory",
+    title: "Výstavba školy",
     location: "Klecany",
-    description: "Realizace moderních kancelářských a skladových prostor s železobetonovou konstrukcí. Projekt zahrnoval kompletní nosný skelet a stavební práce včetně dokončovacích prací.",
+    description: "Realizace nové školní budovy s železobetonovou konstrukcí. Projekt zahrnoval kompletní nosný skelet, učebny, odborné pracovny a další prostory včetně dokončovacích prací.",
     images: [
       "/images/buildings/klecany/1.webp",
       "/images/buildings/klecany/2.webp",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "/images/buildings/klecany/13.webp",
       "/images/buildings/klecany/14.webp",
     ],
-    category: "Kancelářské stavby",
+    category: "Veřejné stavby",
   },
   {
     id: "blank-tunel",
