@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ParallaxSectionProps {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ export default function ParallaxSection({
 }: ParallaxSectionProps) {
   const [scrollY, setScrollY] = useState(0);
   const [elementTop, setElementTop] = useState(0);
-  const elementRef = useState<HTMLDivElement | null>(null);
+  const elementRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +28,7 @@ export default function ParallaxSection({
 
   useEffect(() => {
     if (elementRef.current) {
-      setElementTop(elementRef.current.offsetTop);
+      setElementTop(elementRef.current!.offsetTop || 0);
     }
   }, []);
 
