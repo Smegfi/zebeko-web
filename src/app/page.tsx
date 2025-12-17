@@ -1,6 +1,6 @@
 import AboutSection from "@/components/about-section";
 import FeaturedProjects from "@/components/featured-projects";
-import Hero from "@/components/hero";
+import LandingHero from "@/components/landing-hero";
 import ServicesSection from "@/components/services-section";
 import StatsSection from "@/components/stats-section";
 import type { Metadata } from "next";
@@ -14,8 +14,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero />
-      <StatsSection />
+      <LandingHero />
+      <div id="projekty">
+        <StatsSection />
+      </div>
       <AboutSection />
       <FeaturedProjects />
       <ServicesSection />

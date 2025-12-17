@@ -1,10 +1,10 @@
+import AnalyticsProvider from "@/components/analytics-provider";
+import Footer from "@/components/footer";
+import GoogleAnalytics from "@/components/google-analytics";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import GoogleAnalytics from "@/components/google-analytics";
-import AnalyticsProvider from "@/components/analytics-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,7 +68,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <AnalyticsProvider />
         <Header />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />
