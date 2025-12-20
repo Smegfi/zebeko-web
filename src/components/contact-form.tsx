@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { event } from "@/lib/gtag";
+import { useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -46,10 +46,21 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulace odeslání formuláře
-    // V produkci by zde bylo volání API
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Došlo k chybě při odesílání formuláře");
+      }
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
       
@@ -60,6 +71,7 @@ export default function ContactForm() {
         label: "Contact Form Submission",
       });
     } catch (error) {
+      console.error("Chyba při odesílání formuláře:", error);
       setSubmitStatus("error");
       
       // Track form error

@@ -1,6 +1,6 @@
+import ImageGallery from "@/components/image-gallery";
 import { projects } from "@/data/projects";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -91,25 +91,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </div>
 
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h2 className="text-2xl font-semibold text-neutral-900 mb-6">
               Galerie
             </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {project.images.map((image, index) => (
-                <div
-                  key={index}
-                  className="aspect-video bg-neutral-200 rounded-lg overflow-hidden relative group cursor-pointer"
-                >
-                  <Image
-                    src={image}
-                    alt={`${project.title} - obrázek ${index + 1}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              ))}
-            </div>
+            <ImageGallery images={project.images} title={project.title} />
           </div>
 
           <div className="border-t border-neutral-200 pt-8">
