@@ -1,49 +1,44 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
-    // Zobrazit navigaci po 1 sekundě od načtení stránky
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1500);
-
     let ticking = false;
-    
+
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          const windowHeight = window.innerHeight;
-          
-          // Zobrazit header když se text dotkne vrchní části obrazovky
-          // (když je scroll větší než výška obrazovky - 150px)
-          if (scrollY > windowHeight - 150) {
-            setIsVisible(true);
-          }
+          setIsAtTop(window.scrollY < 32);
           ticking = false;
         });
         ticking = true;
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    
+
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const transparentHeaderAtTop = isHomePage && isAtTop && !isMenuOpen;
+
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800 transition-all duration-300 ${
-        isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        transparentHeaderAtTop
+          ? "translate-y-0 border-b border-transparent bg-transparent opacity-100"
+          : "translate-y-0 border-b border-neutral-800 bg-neutral-900/95 opacity-100 backdrop-blur-sm"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">

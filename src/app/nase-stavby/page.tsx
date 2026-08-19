@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function NaseStavbyPage() {
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white pb-20 pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">

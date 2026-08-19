@@ -47,7 +47,7 @@ export default function FAQLayout({
       <Script
         id="faq-structured-data"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqStructuredData),
         }}
