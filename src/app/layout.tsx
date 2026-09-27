@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import UmamiProvider from "next-umami";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,6 +65,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
+      <head>
+        <UmamiProvider src="https://umami.smegfi.cz/script.js" websiteId="fd77f749-1c7a-4b30-95b9-f422c150d8ce"></UmamiProvider>
+      </head>
       <body className={`${inter.variable} antialiased`}>
         <GoogleAnalytics />
         <AnalyticsProvider />
